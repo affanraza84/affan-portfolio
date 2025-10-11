@@ -281,7 +281,7 @@ const Home: React.FC = () => {
               <TypingEffect
                 texts={[
                   "Full Stack Developer",
-                  "UI/UX Designer",
+                  "DevOps Learner",
                   "Problem Solver",
                   "Gen AI Explorer",
                   "DSA Enthusiast",
