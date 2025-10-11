@@ -590,7 +590,7 @@ interface Stat {
 const StatsSection = () => {
   const stats: Stat[] = [
     { number: "10+", label: "Projects Completed", icon: "🚀", gradient: "from-cyan-500 to-blue-600" },
-    { number: "15+", label: "Technologies Mastered", icon: "⚡", gradient: "from-purple-500 to-pink-600" },
+    { number: "8+", label: "Technologies Mastered", icon: "⚡", gradient: "from-purple-500 to-pink-600" },
     { number: "2+", label: "Years Experience", icon: "📅", gradient: "from-green-500 to-emerald-600" },
     { number: "100%", label: "Client Satisfaction", icon: "⭐", gradient: "from-yellow-500 to-orange-600" },
   ];
