@@ -13,6 +13,7 @@ import {
   User,
   Clock,
   CheckCircle,
+  ArrowUp,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
@@ -25,6 +26,10 @@ const ContactPage = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -85,7 +90,7 @@ const ContactPage = () => {
       icon: FaWhatsapp,
       label: "WhatsApp",
       value: "+91 (764) 304-8967",
-      link: "https://wa.me/917643048967", // ✅ WhatsApp direct chat link
+      link: "https://wa.me/917643048967",
       gradient: "from-emerald-500 to-green-600",
       glowColor: "rgba(16, 185, 129, 0.4)",
     },
@@ -542,7 +547,106 @@ const ContactPage = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Go to Top Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex justify-center pb-8"
+        >
+          <motion.button
+            onClick={scrollToTop}
+            className="relative group cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {/* Animated rings */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.5, 0, 0.5],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="w-full h-full rounded-full border-2 border-cyan-400" />
+            </motion.div>
+
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              animate={{
+                scale: [1, 1.8, 1],
+                opacity: [0.3, 0, 0.3],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            >
+              <div className="w-full h-full rounded-full border-2 border-purple-400" />
+            </motion.div>
+
+            {/* Glow effect */}
+            <div className="absolute -inset-4 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-500/40 via-blue-500/40 to-purple-500/40" />
+
+            {/* Main button */}
+            <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-cyan-950/80 via-blue-950/80 to-purple-950/80 backdrop-blur-xl border-2 border-cyan-400/50 shadow-[0_0_30px_rgba(34,211,238,0.5)] flex items-center justify-center overflow-hidden">
+              {/* Animated background gradient */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20"
+                animate={{
+                  rotate: [0, 360],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              />
+
+              {/* Arrow with animation */}
+              <motion.div
+                animate={{
+                  y: [0, -3, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <ArrowUp className="w-7 h-7 text-cyan-300 relative z-10" />
+              </motion.div>
+
+              {/* Shine effect on hover */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+                style={{ skewX: "-20deg" }}
+              />
+            </div>
+
+            {/* Text below button */}
+            <motion.div
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <span className="text-cyan-300 text-sm font-semibold">
+                Back to Top
+              </span>
+            </motion.div>
+          </motion.button>
+        </motion.div>
       </motion.div>
+
+
     </section>
   );
 };
