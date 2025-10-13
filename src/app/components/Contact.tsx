@@ -15,7 +15,6 @@ import {
   CheckCircle,
   ArrowUp,
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 
 const ContactPage = () => {
@@ -86,15 +85,6 @@ const ContactPage = () => {
       gradient: "from-cyan-500 to-blue-600",
       glowColor: "rgba(34, 211, 238, 0.4)",
     },
-    {
-      icon: FaWhatsapp,
-      label: "WhatsApp",
-      value: "+91 (764) 304-8967",
-      link: "https://wa.me/917643048967",
-      gradient: "from-emerald-500 to-green-600",
-      glowColor: "rgba(16, 185, 129, 0.4)",
-    },
-
     {
       icon: MapPin,
       label: "Location",
@@ -299,7 +289,7 @@ const ContactPage = () => {
 
         {/* Contact Info Cards */}
         <motion.div variants={itemVariants} className="mb-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
