@@ -240,7 +240,7 @@ const Navbar = () => {
                     <span className="text-purple-400">PORTFOLIO</span>
                   </motion.div>
                   {/* Scan line effect */}
-                  <motion.div
+                  {/* <motion.div
                     animate={{ y: ["-100%", "200%"] }}
                     transition={{
                       duration: 2,
@@ -249,7 +249,7 @@ const Navbar = () => {
                     }}
                     className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-transparent h-1/2"
                     style={{ mixBlendMode: "overlay" }}
-                  />
+                  /> */}
                 </div>
               </a>
             </motion.div>

@@ -2,7 +2,17 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
-import { Briefcase, Calendar, MapPin, Award, Users, Target, Zap, Code2, Rocket } from "lucide-react";
+import {
+  Briefcase,
+  Calendar,
+  MapPin,
+  Award,
+  Users,
+  Target,
+  Zap,
+  Code2,
+  Rocket,
+} from "lucide-react";
 
 const ExperiencePage = () => {
   const containerVariants: Variants = {
@@ -31,56 +41,77 @@ const ExperiencePage = () => {
 
   const experiences = [
     {
+      title: "Frontend Engineer Intern",
+      company: "BinaryFlo",
+      location: "Remote",
+      period: "November 2025 - Present",
+      description:
+        "Got selected as a frontend engineer intern through a technical interview",
+      achievements: [
+        "Developing production-grade UI using Nextjs, TailwindCSS and Typescript.",
+        "Contributing to component-based architecture and resuable design system.",
+        "Optimizing Lighthouse scores and enabling pixel-perfect responsive design.",
+        "Performing iterative development under sprint-based agile workflows.",
+      ],
+      tech: ["React", "Node.js", "AWS", "Express.js", "PostgreSQL"],
+      gradient: "from-emerald-500 to-green-600",
+      glowColor: "rgba(16, 185, 129, 0.35)",
+      icon: Briefcase,
+    },
+    {
       title: "Full Stack Development Intern",
       company: "Digital Blinc",
       location: "Remote",
       period: "July 2025 - August 2025",
-      description: "Gained real-world experience in full-stack development by contributing to an API Integration Framework project.",
+      description:
+        "Gained real-world experience in full-stack development by contributing to an API Integration Framework project.",
       achievements: [
         "Developed and integrated RESTful APIs to streamline data flow between services.",
         "Implemented frontend features using modern frameworks, improving user experience.",
         "Optimized database queries for faster performance and scalability.",
-        "Collaborated with mentors to design a modular architecture for future-ready web applications."
+        "Collaborated with mentors to design a modular architecture for future-ready web applications.",
       ],
       tech: ["React", "Node.js", "AWS", "Express.js", "PostgreSQL"],
-      gradient: "from-emerald-500 to-green-600",
-      glowColor: "rgba(16, 185, 129, 0.4)",
-      icon: Rocket
+      gradient: "from-indigo-500 to-purple-600",
+      glowColor: "rgba(79,70, 229, 0.35)",
+      icon: Rocket,
     },
     {
       title: "Technical Coordinator",
       company: "News and Publication Society",
       location: "BIT Mesra",
       period: "May 2025 - present",
-      description: "Contributed to designing and deploying scalable web solutions by integrating modern frontend and backend technologies to optimize performance and elevate user experience.",
+      description:
+        "Contributed to designing and deploying scalable web solutions by integrating modern frontend and backend technologies to optimize performance and elevate user experience.",
       achievements: [
         "Developed backend services using Express.js and MongoDB, boosting workflow efficiency by 20%.",
         "Built responsive and dynamic UI components with React.js and Tailwind CSS for seamless usability.",
         "Collaborated in Agile sprints to deliver and deploy content management system features.",
-        "Ensured cross-platform optimization and maintained clean, modular code for future scalability."
+        "Ensured cross-platform optimization and maintained clean, modular code for future scalability.",
       ],
       tech: ["React", "Remix", "Avion", "Tailwind"],
       gradient: "from-blue-500 to-indigo-600",
       glowColor: "rgba(59, 130, 246, 0.4)",
-      icon: Code2
+      icon: Code2,
     },
     {
       title: "Joint-Treasurer",
       company: "Environment Protection and Awareness Club",
       location: "BIT Mesra",
       period: "May 2025 - present",
-      description: "Actively contributing to campus sustainability initiatives through event organization, financial management, and community engagement under the EPAC Club, BIT Mesra.",
+      description:
+        "Actively contributing to campus sustainability initiatives through event organization, financial management, and community engagement under the EPAC Club, BIT Mesra.",
       achievements: [
         "Managed and maintained accurate financial records for club activities and events.",
         "Co-organized sustainability drives and awareness campaigns engaging 100+ students.",
         "Partnered with faculty and local organizations to promote eco-friendly practices on campus.",
-        "Led initiatives to reduce plastic usage and increase green participation among students."
+        "Led initiatives to reduce plastic usage and increase green participation among students.",
       ],
       tech: [],
       gradient: "from-purple-500 to-pink-600",
       glowColor: "rgba(168, 85, 247, 0.4)",
-      icon: Briefcase
-    }
+      icon: Briefcase,
+    },
   ];
 
   return (
@@ -245,11 +276,7 @@ const ExperiencePage = () => {
             {/* Experience items */}
             <div className="space-y-12">
               {experiences.map((exp, index) => (
-                <ExperienceCard 
-                  key={index}
-                  experience={exp}
-                  index={index}
-                />
+                <ExperienceCard key={index} experience={exp} index={index} />
               ))}
             </div>
           </div>
@@ -280,7 +307,10 @@ interface ExperienceCardProps {
   index: number;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) => {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({
+  experience,
+  index,
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(cardRef, { once: true, amount: 0.2 });
   const IconComponent = experience.icon;
@@ -298,20 +328,20 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
         <motion.div
           className="hidden md:flex absolute -left-[4.5rem] top-8 w-8 h-8 rounded-full items-center justify-center z-10"
           style={{
-            background: `linear-gradient(135deg, ${experience.glowColor}, ${experience.glowColor})`
+            background: `linear-gradient(135deg, ${experience.glowColor}, ${experience.glowColor})`,
           }}
           animate={{
             scale: [1, 1.2, 1],
             boxShadow: [
               `0 0 0 0 ${experience.glowColor}`,
               `0 0 0 10px rgba(0,0,0,0)`,
-              `0 0 0 0 ${experience.glowColor}`
-            ]
+              `0 0 0 0 ${experience.glowColor}`,
+            ],
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
-            delay: index * 0.3
+            delay: index * 0.3,
           }}
         >
           <div className="w-4 h-4 rounded-full bg-white" />
@@ -336,7 +366,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <motion.div 
+                  <motion.div
                     className={`w-12 h-12 rounded-xl bg-gradient-to-br ${experience.gradient} flex items-center justify-center shadow-lg`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -347,7 +377,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
                     <h3 className="text-2xl font-bold text-cyan-300 group-hover:text-cyan-200 transition-colors">
                       {experience.title}
                     </h3>
-                    <p className="text-lg text-cyan-100 font-semibold">{experience.company}</p>
+                    <p className="text-lg text-cyan-100 font-semibold">
+                      {experience.company}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -392,13 +424,15 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
             </div>
 
             {/* Shine effect */}
-            <motion.div
+            {/* <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"
               style={{ skewX: "-20deg" }}
-            />
+            /> */}
 
             {/* Bottom accent */}
-            <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${experience.gradient}`} />
+            <div
+              className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${experience.gradient}`}
+            />
           </div>
         </motion.div>
       </div>
@@ -414,11 +448,17 @@ const CoreCompetencies = () => {
       gradient: "from-cyan-500 to-blue-600",
       glowColor: "rgba(34, 211, 238, 0.4)",
       skills: [
-        { name: "Full Stack Development", desc: "Building scalable web applications" },
+        {
+          name: "Full Stack Development",
+          desc: "Building scalable web applications",
+        },
         { name: "Data Structure and Algorithm", desc: "solved 100+ questions" },
-        { name: "Object Oriented Programming", desc: "Learned core concepts in Java" },
-        { name: "Database Design", desc: "SQL & NoSQL optimization" }
-      ]
+        {
+          name: "Object Oriented Programming",
+          desc: "Learned core concepts in Java",
+        },
+        { name: "Database Design", desc: "SQL & NoSQL optimization" },
+      ],
     },
     {
       category: "Leadership & Collaboration",
@@ -426,11 +466,23 @@ const CoreCompetencies = () => {
       gradient: "from-emerald-500 to-green-600",
       glowColor: "rgba(16, 185, 129, 0.4)",
       skills: [
-        { name: "Team Management", desc: "Working with cross-functional teams" },
-        { name: "Mentoring", desc: "Guiding peers and juniors in topics of web development" },
-        { name: "Project Execution", desc: "Planning sprints and ensuring smooth deployment cycles" },
-        { name: "Community Engagement", desc: "Organizing campus events and sustainability drives with 100+ participants" }
-      ]
+        {
+          name: "Team Management",
+          desc: "Working with cross-functional teams",
+        },
+        {
+          name: "Mentoring",
+          desc: "Guiding peers and juniors in topics of web development",
+        },
+        {
+          name: "Project Execution",
+          desc: "Planning sprints and ensuring smooth deployment cycles",
+        },
+        {
+          name: "Community Engagement",
+          desc: "Organizing campus events and sustainability drives with 100+ participants",
+        },
+      ],
     },
     {
       category: "Problem Solving",
@@ -438,11 +490,23 @@ const CoreCompetencies = () => {
       gradient: "from-purple-500 to-pink-600",
       glowColor: "rgba(168, 85, 247, 0.4)",
       skills: [
-        { name: "Algorithm Design", desc: "Designing efficient solutions for complex challenges" },
-        { name: "Performance Optimization", desc: "Enhancing app speed and backend efficiency" },
-        { name: "Debugging & Troubleshooting", desc: "Resolving code and API integration issues" },
-        { name: "Code Review", desc: "Ensuring maintainable and scalable code standards" }
-      ]
+        {
+          name: "Algorithm Design",
+          desc: "Designing efficient solutions for complex challenges",
+        },
+        {
+          name: "Performance Optimization",
+          desc: "Enhancing app speed and backend efficiency",
+        },
+        {
+          name: "Debugging & Troubleshooting",
+          desc: "Resolving code and API integration issues",
+        },
+        {
+          name: "Code Review",
+          desc: "Ensuring maintainable and scalable code standards",
+        },
+      ],
     },
     {
       category: "Innovation & Growth",
@@ -450,12 +514,24 @@ const CoreCompetencies = () => {
       gradient: "from-orange-500 to-red-600",
       glowColor: "rgba(249, 115, 22, 0.4)",
       skills: [
-        { name: "Emerging Technologies", desc: "Exploring AI tools, modern frameworks and new tech stacks" },
-        { name: "Creative Development", desc: "Designing unique and user-centric web solutions" },
-        { name: "Process Improvement", desc: "Automating workflows for faster and cleaner deployment" },
-        { name: "Continuous Learnig", desc: "Staying aligned with evolving industry standards" }
-      ]
-    }
+        {
+          name: "Emerging Technologies",
+          desc: "Exploring AI tools, modern frameworks and new tech stacks",
+        },
+        {
+          name: "Creative Development",
+          desc: "Designing unique and user-centric web solutions",
+        },
+        {
+          name: "Process Improvement",
+          desc: "Automating workflows for faster and cleaner deployment",
+        },
+        {
+          name: "Continuous Learnig",
+          desc: "Staying aligned with evolving industry standards",
+        },
+      ],
+    },
   ];
 
   return (
@@ -482,23 +558,25 @@ const CoreCompetencies = () => {
               whileHover={{ scale: 1.03, y: -5 }}
             >
               {/* Glow effect */}
-              <div 
+              <div
                 className="absolute -inset-1 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ background: competency.glowColor }}
               />
-              
+
               {/* Card */}
               <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-6 shadow-2xl overflow-hidden min-h-[320px]">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6">
-                  <motion.div 
+                  <motion.div
                     className={`w-12 h-12 rounded-xl bg-gradient-to-br ${competency.gradient} flex items-center justify-center shadow-lg`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <IconComponent className="w-6 h-6 text-white" />
                   </motion.div>
-                  <h4 className="text-xl font-bold text-cyan-300">{competency.category}</h4>
+                  <h4 className="text-xl font-bold text-cyan-300">
+                    {competency.category}
+                  </h4>
                 </div>
 
                 {/* Skills list */}
@@ -509,9 +587,9 @@ const CoreCompetencies = () => {
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ 
-                        duration: 0.4, 
-                        delay: index * 0.1 + skillIndex * 0.1 
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.1 + skillIndex * 0.1,
                       }}
                       whileHover={{ x: 5 }}
                       className="group/skill relative"
@@ -521,12 +599,12 @@ const CoreCompetencies = () => {
                           <motion.div
                             animate={{
                               scale: [1, 1.3, 1],
-                              rotate: [0, 180, 360]
+                              rotate: [0, 180, 360],
                             }}
                             transition={{
                               duration: 2,
                               repeat: Infinity,
-                              delay: skillIndex * 0.2
+                              delay: skillIndex * 0.2,
                             }}
                             className="mt-1"
                           >
@@ -546,7 +624,7 @@ const CoreCompetencies = () => {
                         <motion.div
                           className="absolute inset-0 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"
                           style={{
-                            background: `linear-gradient(90deg, ${competency.glowColor}, transparent)`
+                            background: `linear-gradient(90deg, ${competency.glowColor}, transparent)`,
                           }}
                         />
 
@@ -564,11 +642,13 @@ const CoreCompetencies = () => {
                 <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
-                    opacity: [0.1, 0.2, 0.1]
+                    opacity: [0.1, 0.2, 0.1],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full blur-3xl"
-                  style={{ backgroundColor: competency.glowColor.replace('0.4', '0.3') }}
+                  style={{
+                    backgroundColor: competency.glowColor.replace("0.4", "0.3"),
+                  }}
                 />
 
                 {/* Shine effect on card */}
@@ -578,7 +658,9 @@ const CoreCompetencies = () => {
                 />
 
                 {/* Bottom accent */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${competency.gradient}`} />
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${competency.gradient}`}
+                />
               </div>
             </motion.div>
           );
@@ -661,13 +743,13 @@ const TimelineCanvas = () => {
       ctx.beginPath();
       ctx.strokeStyle = "rgba(16, 185, 129, 0.3)";
       ctx.lineWidth = 2;
-      
+
       for (let i = 0; i < 360; i++) {
         const angle = (i / 360) * Math.PI * 6;
         const distance = 20 + (i / 360) * 100;
         const x = centerX + Math.cos(angle) * distance;
         const y = centerY + Math.sin(angle) * distance;
-        
+
         if (i === 0) {
           ctx.moveTo(x, y);
         } else {
@@ -679,13 +761,17 @@ const TimelineCanvas = () => {
       // Draw pulsing center
       const pulseRadius = 15 + Math.sin(time * 2) * 5;
       const gradient = ctx.createRadialGradient(
-        centerX, centerY, 0,
-        centerX, centerY, pulseRadius
+        centerX,
+        centerY,
+        0,
+        centerX,
+        centerY,
+        pulseRadius
       );
       gradient.addColorStop(0, "rgba(16, 185, 129, 0.8)");
       gradient.addColorStop(0.5, "rgba(59, 130, 246, 0.5)");
       gradient.addColorStop(1, "transparent");
-      
+
       ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(centerX, centerY, pulseRadius, 0, Math.PI * 2);
@@ -698,10 +784,17 @@ const TimelineCanvas = () => {
         const y = centerY + Math.sin(newAngle) * point.distance;
 
         // Glow
-        const pointGradient = ctx.createRadialGradient(x, y, 0, x, y, point.radius * 3);
+        const pointGradient = ctx.createRadialGradient(
+          x,
+          y,
+          0,
+          x,
+          y,
+          point.radius * 3
+        );
         pointGradient.addColorStop(0, `hsla(${point.hue}, 70%, 60%, 0.8)`);
         pointGradient.addColorStop(1, "transparent");
-        
+
         ctx.fillStyle = pointGradient;
         ctx.beginPath();
         ctx.arc(x, y, point.radius * 3, 0, Math.PI * 2);
@@ -716,11 +809,19 @@ const TimelineCanvas = () => {
         // Connect points
         if (index > 0) {
           const prevPoint = timelinePoints[index - 1];
-          const prevX = centerX + Math.cos(prevPoint.angle + time * prevPoint.speed) * prevPoint.distance;
-          const prevY = centerY + Math.sin(prevPoint.angle + time * prevPoint.speed) * prevPoint.distance;
-          
+          const prevX =
+            centerX +
+            Math.cos(prevPoint.angle + time * prevPoint.speed) *
+              prevPoint.distance;
+          const prevY =
+            centerY +
+            Math.sin(prevPoint.angle + time * prevPoint.speed) *
+              prevPoint.distance;
+
           ctx.beginPath();
-          ctx.strokeStyle = `hsla(${(point.hue + prevPoint.hue) / 2}, 70%, 60%, 0.3)`;
+          ctx.strokeStyle = `hsla(${
+            (point.hue + prevPoint.hue) / 2
+          }, 70%, 60%, 0.3)`;
           ctx.lineWidth = 1;
           ctx.moveTo(prevX, prevY);
           ctx.lineTo(x, y);
@@ -735,11 +836,24 @@ const TimelineCanvas = () => {
         const y = centerY + Math.sin(milestone.angle) * milestone.distance;
 
         // Large glow
-        const milestoneGradient = ctx.createRadialGradient(x, y, 0, x, y, milestone.radius * 4);
-        milestoneGradient.addColorStop(0, `hsla(${milestone.hue}, 80%, 70%, 0.9)`);
-        milestoneGradient.addColorStop(0.5, `hsla(${milestone.hue}, 70%, 60%, 0.5)`);
+        const milestoneGradient = ctx.createRadialGradient(
+          x,
+          y,
+          0,
+          x,
+          y,
+          milestone.radius * 4
+        );
+        milestoneGradient.addColorStop(
+          0,
+          `hsla(${milestone.hue}, 80%, 70%, 0.9)`
+        );
+        milestoneGradient.addColorStop(
+          0.5,
+          `hsla(${milestone.hue}, 70%, 60%, 0.5)`
+        );
         milestoneGradient.addColorStop(1, "transparent");
-        
+
         ctx.fillStyle = milestoneGradient;
         ctx.beginPath();
         ctx.arc(x, y, milestone.radius * 4, 0, Math.PI * 2);

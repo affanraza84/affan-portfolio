@@ -57,7 +57,7 @@ const ProjectsPage = () => {
       description:
         "A full-stack e-commerce platform with an interactive t-shirt designer and user authentication, enabling users to create, save, and manage their custom designs while maintaining a secure experience.",
       image:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/1200x/05/08/42/05084291df014119af9dd425cc94530e.jpg",
       tech: ["Next.js", "TypeScript", "Tailwind", "Firebase"],
       gradient: "from-purple-500 to-indigo-600",
       glowColor: "rgba(168, 85, 247, 0.4)",
@@ -70,7 +70,7 @@ const ProjectsPage = () => {
       description:
         "A premium lehenga shopping website with appointment booking and customization options for traditional wear, delivering a seamless and personalized online shopping experience.",
       image:
-        "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/736x/b9/2f/f5/b92ff5d2013e43589349109e09f7955f.jpg",
       tech: ["React", "Three.js", "Express", "PostgreSQL"],
       gradient: "from-amber-500 to-orange-600",
       glowColor: "rgba(251, 191, 36, 0.4)",
@@ -83,7 +83,7 @@ const ProjectsPage = () => {
       description:
         "A real-time chat app supporting multiple rooms, media sharing, and JWT-based authentication. Leveraged Socket.io for event-driven communication and implemented persistent message storage for reliable user experience.",
       image:
-        "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/1200x/18/f7/a8/18f7a83f40c9fad584c0faf06c22ac1c.jpg",
       tech: ["React", "Socket.io", "Firebase", "WebRTC"],
       gradient: "from-blue-500 to-cyan-600",
       glowColor: "rgba(59, 130, 246, 0.4)",

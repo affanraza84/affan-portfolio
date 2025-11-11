@@ -111,7 +111,7 @@ const Home: React.FC = () => {
               className="relative w-40 h-40 rounded-full overflow-hidden border-3 border-cyan-400/50 shadow-[0_0_40px_rgba(34,211,238,0.6)] bg-gradient-to-br from-cyan-500/20 via-blue-600/20 to-purple-600/20 backdrop-blur-xl flex items-center justify-center"
             >
               {/* Holographic scan lines */}
-              <motion.div
+              {/* <motion.div
                 animate={{ y: ["-100%", "200%"] }}
                 transition={{
                   duration: 2,
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                 }}
                 className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent z-20 pointer-events-none"
                 style={{ height: "30%" }}
-              />
+              /> */}
 
               {/* Avatar Image - Replace src with your image URL */}
               <Image
