@@ -44,7 +44,7 @@ const ProjectsPage = () => {
       description:
         "Modern bakery website, SEO-optimized e-commerce platform featuring a dynamic product catalog, secure contact form, and API-driven architecture. Successfully deployed on Vercel and Render for seamless accessibility.",
       image:
-        "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&h=600&fit=crop",
+        "https://i.pinimg.com/736x/c8/49/ef/c849ef8805250d69372712d91c9378a4.jpg",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       gradient: "from-pink-500 to-rose-600",
       glowColor: "rgba(236, 72, 153, 0.4)",
