@@ -83,7 +83,7 @@ const ProjectsPage = () => {
       description:
         "A real-time chat app supporting multiple rooms, media sharing, and JWT-based authentication. Leveraged Socket.io for event-driven communication and implemented persistent message storage for reliable user experience.",
       image:
-        "https://i.pinimg.com/1200x/18/f7/a8/18f7a83f40c9fad584c0faf06c22ac1c.jpg",
+        "/images/cat.jpg",
       tech: ["React", "Socket.io", "Firebase", "WebRTC"],
       gradient: "from-blue-500 to-cyan-600",
       glowColor: "rgba(59, 130, 246, 0.4)",
@@ -201,7 +201,7 @@ const ProjectsPage = () => {
               ))}
 
               {/* Glowing background */}
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5],
@@ -212,7 +212,7 @@ const ProjectsPage = () => {
                   ease: "easeInOut",
                 }}
                 className="absolute -inset-8 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-3xl blur-3xl"
-              />
+              /> */}
 
               {/* Main Canvas Container */}
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-3 border-purple-400/50 shadow-[0_0_40px_rgba(168,85,247,0.6)] bg-gradient-to-br from-purple-950/40 via-pink-950/40 to-cyan-950/40 backdrop-blur-xl flex-shrink-0">
@@ -220,7 +220,7 @@ const ProjectsPage = () => {
                 <NetworkCanvas />
 
                 {/* Holographic scan lines */}
-                <motion.div
+                {/* <motion.div
                   animate={{ y: ["-100%", "200%"] }}
                   transition={{
                     duration: 3,
@@ -229,7 +229,7 @@ const ProjectsPage = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-400/20 to-transparent z-20 pointer-events-none"
                   style={{ height: "30%" }}
-                />
+                /> */}
 
                 {/* Corner accents */}
                 {[0, 90, 180, 270].map((rotation) => (
@@ -298,7 +298,7 @@ const ProjectsPage = () => {
               whileTap={{ scale: 0.95 }}
             >
               {/* Glow effect */}
-              <motion.div
+              {/* <motion.div
                 className="absolute -inset-2 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 animate={{
                   background: [
@@ -313,12 +313,12 @@ const ProjectsPage = () => {
                   repeat: Infinity,
                   ease: "linear",
                 }}
-              />
+              /> */}
 
               {/* Button */}
               <div className="relative px-8 py-4 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-2xl overflow-hidden shadow-2xl">
                 {/* Animated background */}
-                <motion.div
+                {/* <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                   animate={{
                     x: ["-100%", "200%"],
@@ -328,7 +328,7 @@ const ProjectsPage = () => {
                     repeat: Infinity,
                     ease: "linear",
                   }}
-                />
+                /> */}
 
                 {/* Content */}
                 <div className="relative flex items-center gap-3 text-white font-bold text-lg">
@@ -435,12 +435,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {/* Glow effect */}
-        <div
+        {/* <div
           className="absolute -inset-1 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
             background: `linear-gradient(135deg, ${project.glowColor}, ${project.glowColor})`,
           }}
-        />
+        /> */}
 
         {/* Card */}
         <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl overflow-hidden shadow-2xl">
@@ -469,7 +469,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             </motion.div>
 
             {/* Scan line effect */}
-            <motion.div
+            {/* <motion.div
               className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent"
               animate={{ y: ["-100%", "200%"] }}
               transition={{
@@ -479,7 +479,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 repeatDelay: 2,
               }}
               style={{ height: "30%" }}
-            />
+            /> */}
           </div>
 
           {/* Content */}

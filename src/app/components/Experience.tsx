@@ -194,7 +194,7 @@ const ExperiencePage = () => {
               ))}
 
               {/* Glowing background */}
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5],
@@ -205,7 +205,7 @@ const ExperiencePage = () => {
                   ease: "easeInOut",
                 }}
                 className="absolute -inset-8 bg-gradient-to-r from-emerald-500 via-blue-500 to-orange-500 rounded-3xl blur-3xl"
-              />
+              /> */}
 
               {/* Main Canvas Container */}
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-3 border-emerald-400/50 shadow-[0_0_40px_rgba(16,185,129,0.6)] bg-gradient-to-br from-emerald-950/40 via-blue-950/40 to-orange-950/40 backdrop-blur-xl flex-shrink-0">
@@ -213,7 +213,7 @@ const ExperiencePage = () => {
                 <TimelineCanvas />
 
                 {/* Holographic scan lines */}
-                <motion.div
+                {/* <motion.div
                   animate={{ y: ["-100%", "200%"] }}
                   transition={{
                     duration: 3,
@@ -222,7 +222,7 @@ const ExperiencePage = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-400/20 to-transparent z-20 pointer-events-none"
                   style={{ height: "30%" }}
-                />
+                /> */}
 
                 {/* Corner accents */}
                 {[0, 90, 180, 270].map((rotation) => (
@@ -353,12 +353,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           className="relative group"
         >
           {/* Glow effect */}
-          <div
+          {/* <div
             className="absolute -inset-1 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             style={{
               background: `linear-gradient(135deg, ${experience.glowColor}, ${experience.glowColor})`,
             }}
-          />
+          /> */}
 
           {/* Card */}
           <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-8 shadow-2xl overflow-hidden">
@@ -639,7 +639,7 @@ const CoreCompetencies = () => {
                 </div>
 
                 {/* Decorative corner glow */}
-                <motion.div
+                {/* <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.1, 0.2, 0.1],
@@ -649,7 +649,7 @@ const CoreCompetencies = () => {
                   style={{
                     backgroundColor: competency.glowColor.replace("0.4", "0.3"),
                   }}
-                />
+                /> */}
 
                 {/* Shine effect on card */}
                 <motion.div

@@ -214,7 +214,7 @@ const ContactPage = () => {
               ))}
 
               {/* Glowing background */}
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5],
@@ -225,7 +225,7 @@ const ContactPage = () => {
                   ease: "easeInOut",
                 }}
                 className="absolute -inset-8 bg-gradient-to-r from-cyan-500 via-pink-500 to-emerald-500 rounded-3xl blur-3xl"
-              />
+              /> */}
 
               {/* Main Canvas Container */}
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-3 border-cyan-400/50 shadow-[0_0_40px_rgba(34,211,238,0.6)] bg-gradient-to-br from-cyan-950/40 via-pink-950/40 to-emerald-950/40 backdrop-blur-xl flex-shrink-0">
@@ -233,7 +233,7 @@ const ContactPage = () => {
                 <MessageCanvas />
 
                 {/* Holographic scan lines */}
-                <motion.div
+                {/* <motion.div
                   animate={{ y: ["-100%", "200%"] }}
                   transition={{
                     duration: 3,
@@ -242,7 +242,7 @@ const ContactPage = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent z-20 pointer-events-none"
                   style={{ height: "30%" }}
-                />
+                /> */}
 
                 {/* Corner accents */}
                 {[0, 90, 180, 270].map((rotation) => (
@@ -311,7 +311,7 @@ const ContactPage = () => {
                   <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-6 text-center shadow-2xl overflow-hidden">
                     <motion.div
                       className={`w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br ${info.gradient} flex items-center justify-center shadow-lg`}
-                      whileHover={{ rotate: 360 }}
+                      // whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
                       <IconComponent className="w-7 h-7 text-white" />
@@ -320,11 +320,11 @@ const ContactPage = () => {
                       {info.label}
                     </h4>
                     <p className="text-cyan-100/80 text-sm">{info.value}</p>
-
+{/* 
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"
                       style={{ skewX: "-20deg" }}
-                    />
+                    /> */}
 
                     <div
                       className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${info.gradient}`}
@@ -343,7 +343,7 @@ const ContactPage = () => {
             variants={itemVariants}
             className="lg:col-span-2 relative group"
           >
-            <div className="absolute -inset-1 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-500/40 via-blue-500/40 to-purple-500/40" />
+            {/* <div className="absolute -inset-1 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-500/40 via-blue-500/40 to-purple-500/40" /> */}
 
             <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-8 shadow-2xl overflow-hidden">
               <h3 className="text-2xl font-bold text-cyan-300 mb-6 flex items-center gap-2">

@@ -109,7 +109,7 @@ const About: React.FC = () => {
               ))}
 
               {/* Glowing background */}
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5],
@@ -120,7 +120,7 @@ const About: React.FC = () => {
                   ease: "easeInOut",
                 }}
                 className="absolute -inset-8 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-3xl blur-3xl"
-              />
+              /> */}
 
               {/* Main Canvas Container */}
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-3 border-cyan-400/50 shadow-[0_0_40px_rgba(34,211,238,0.6)] bg-gradient-to-br from-cyan-950/40 via-blue-950/40 to-purple-950/40 backdrop-blur-xl flex-shrink-0">
@@ -128,7 +128,7 @@ const About: React.FC = () => {
                 <InteractiveCanvas />
 
                 {/* Holographic scan lines */}
-                <motion.div
+                {/* <motion.div
                   animate={{ y: ["-100%", "200%"] }}
                   transition={{
                     duration: 3,
@@ -137,7 +137,7 @@ const About: React.FC = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent z-20 pointer-events-none"
                   style={{ height: "30%" }}
-                />
+                /> */}
 
                 {/* Corner accents */}
                 {[0, 90, 180, 270].map((rotation) => (
@@ -280,16 +280,16 @@ const About: React.FC = () => {
               return (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.05, y: -5 }}
+                  // whileHover={{ scale: 1.05, y: -5 }}
                   className="relative group"
                 >
                   {/* Glow effect */}
-                  <div
+                  {/* <div
                     className="absolute -inset-1 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
                       background: `linear-gradient(to right, ${item.glowColor}, ${item.glowColor})`,
                     }}
-                  />
+                  /> */}
 
                   {/* Card */}
                   <div className="relative bg-gradient-to-br from-cyan-950/60 via-blue-950/60 to-purple-950/60 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-6 shadow-lg">
@@ -309,10 +309,10 @@ const About: React.FC = () => {
                     </p>
 
                     {/* Shine effect */}
-                    <motion.div
+                    {/* <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"
                       style={{ skewX: "-20deg" }}
-                    />
+                    /> */}
                   </div>
                 </motion.div>
               );

@@ -154,7 +154,7 @@ const SkillsPage = () => {
               ))}
 
               {/* Glowing background */}
-              <motion.div
+              {/* <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [0.5, 0.8, 0.5],
@@ -165,7 +165,7 @@ const SkillsPage = () => {
                   ease: "easeInOut",
                 }}
                 className="absolute -inset-8 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-3xl blur-3xl"
-              />
+              /> */}
 
               {/* Main Canvas Container */}
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-3 border-cyan-400/50 shadow-[0_0_40px_rgba(34,211,238,0.6)] bg-gradient-to-br from-cyan-950/40 via-blue-950/40 to-purple-950/40 backdrop-blur-xl flex-shrink-0">
@@ -173,7 +173,7 @@ const SkillsPage = () => {
                 <WaveCanvas />
 
                 {/* Holographic scan lines */}
-                <motion.div
+                {/* <motion.div
                   animate={{ y: ["-100%", "200%"] }}
                   transition={{
                     duration: 3,
@@ -182,7 +182,7 @@ const SkillsPage = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent z-20 pointer-events-none"
                   style={{ height: "30%" }}
-                />
+                /> */}
 
                 {/* Corner accents */}
                 {[0, 90, 180, 270].map((rotation) => (
@@ -391,13 +391,13 @@ const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
           </div>
 
           {/* Shine effect */}
-          <motion.div
+          {/* <motion.div
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"
             style={{ skewX: "-20deg" }}
-          />
+          /> */}
 
           {/* Decorative corner */}
-          <motion.div
+          {/* <motion.div
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.1, 0.2, 0.1]
@@ -405,7 +405,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ category, index }) => {
             transition={{ duration: 3, repeat: Infinity }}
             className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full blur-3xl"
             style={{ backgroundColor: category.glowColor.replace('0.4', '0.3') }}
-          />
+          /> */}
         </div>
       </motion.div>
     </motion.div>
@@ -457,7 +457,7 @@ const FloatingBadges = () => {
             whileHover={{ scale: 1.3, y: -15, zIndex: 50 }}
           >
             {/* Outer glow ring */}
-            <motion.div
+            {/* <motion.div
               className="absolute -inset-3 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl"
               style={{
                 background: `radial-gradient(circle, ${badge.color}80, transparent 70%)`
@@ -470,7 +470,7 @@ const FloatingBadges = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            />
+            /> */}
 
             {/* Main badge */}
             <div
@@ -545,7 +545,7 @@ const FloatingBadges = () => {
               ))}
 
               {/* Shimmer effect */}
-              <motion.div
+              {/* <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100"
                 animate={{
                   x: ["-200%", "200%"]
@@ -557,7 +557,7 @@ const FloatingBadges = () => {
                   repeatDelay: 0.5
                 }}
                 style={{ skewX: "-20deg" }}
-              />
+              /> */}
 
               {/* Text */}
               <span className="relative z-10 flex items-center gap-2">
@@ -566,13 +566,13 @@ const FloatingBadges = () => {
             </div>
 
             {/* Bottom glow */}
-            <motion.div
+            {/* <motion.div
               className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3/4 h-1 rounded-full blur-sm opacity-0 group-hover:opacity-100"
               style={{
                 backgroundColor: badge.color,
                 boxShadow: `0 0 20px ${badge.color}`
               }}
-            />
+            /> */}
           </motion.div>
         );
       })}
