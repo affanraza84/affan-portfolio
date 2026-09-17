@@ -83,7 +83,7 @@ const ProjectsPage = () => {
       description:
         "A real-time chat app supporting multiple rooms, media sharing, and JWT-based authentication. Leveraged Socket.io for event-driven communication and implemented persistent message storage for reliable user experience.",
       image:
-        "/images/cat.jpg",
+        "/Images/chatting-sapphire.jpg",
       tech: ["React", "Socket.io", "Firebase", "WebRTC"],
       gradient: "from-blue-500 to-cyan-600",
       glowColor: "rgba(59, 130, 246, 0.4)",
